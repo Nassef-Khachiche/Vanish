@@ -1,0 +1,6 @@
+name: Nassef
+version: '${project.version}'
+main: cmdexe.Nassef.plugin
+api-version: 1.18
+commands:
+  heal:
