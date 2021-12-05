@@ -22,16 +22,17 @@ public class VanishCommand implements CommandExecutor {
                     if (cmd.getName().equalsIgnoreCase("vanish")) {
                         if (vanishedPlayers.contains(player)) {
                             for (Player target : Bukkit.getOnlinePlayers()) {
-                                target.hidePlayer(player);
+                                target.showPlayer(player);
                             }
                             player.sendMessage(ChatColor.BOLD + "You are no longer hidden.");
                             vanishedPlayers.remove(player);
                         } else {
                             for (Player target : Bukkit.getOnlinePlayers()) {
-                                target.showPlayer(player);
+                                target.hidePlayer(player);
                             }
                             player.sendMessage(ChatColor.BOLD + "You are hidden from other players.");
-                            vanishedPlayers.add(player);                        }
+                            vanishedPlayers.add(player);
+                        }
                     }
                 } else {
                     player.sendMessage(ChatColor.DARK_RED + "This Command is only for people who are operator.");
