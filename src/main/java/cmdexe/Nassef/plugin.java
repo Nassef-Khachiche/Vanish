@@ -8,8 +8,7 @@ public final class plugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Enabled");
-//        Plugin[] plugins = Bukkit.getPluginManager().getPlugins();
+        System.out.println("Vanish plugin: Enabled");
         getCommand("vanish").setExecutor(new VanishCommand());
     }
 }
