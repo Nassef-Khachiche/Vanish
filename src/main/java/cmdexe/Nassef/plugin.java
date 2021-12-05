@@ -8,6 +8,6 @@ public final class plugin extends JavaPlugin {
     public void onEnable() {
         System.out.println("Enabled");
 
-        getCommand("heal").setExecutor(new VanishCommand());
+        getCommand("vanish").setExecutor(new VanishCommand());
     }
 }

@@ -18,6 +18,7 @@ public class VanishCommand implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if (player.isOp()) {
+                    // will unvanish after typing again
                     if (cmd.getName().equalsIgnoreCase("vanish")) {
                         if (vanishedPlayers.contains(player)) {
                             vanishedPlayers.remove(player);
