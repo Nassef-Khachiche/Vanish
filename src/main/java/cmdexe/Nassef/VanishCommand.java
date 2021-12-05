@@ -5,34 +5,30 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VanishCommand implements CommandExecutor {
 
+    List<Player> vanishedPlayers = new ArrayList<>();
+
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-
-        List<Player> vanishedPlayers = new ArrayList<>();
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                Plugin plugin = (Plugin) sender;
                 if (player.isOp()) {
-                    // will unvanish after typing again
-                    if (cmd.getName().contains("vanish")) {
+                    if (cmd.getName().equalsIgnoreCase("vanish")) {
                         if (vanishedPlayers.contains(player)) {
                             for (Player target : Bukkit.getOnlinePlayers()) {
-                                target.showPlayer(plugin,player);
+                                target.hidePlayer(player);
                             }
                             player.sendMessage(ChatColor.BOLD + "You are no longer hidden.");
                             vanishedPlayers.remove(player);
                         } else {
                             for (Player target : Bukkit.getOnlinePlayers()) {
-                                target.hidePlayer(plugin, player);
+                                target.showPlayer(player);
                             }
                             player.sendMessage(ChatColor.BOLD + "You are hidden from other players.");
                             vanishedPlayers.add(player);                        }
