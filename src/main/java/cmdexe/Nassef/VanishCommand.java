@@ -23,21 +23,22 @@ public class VanishCommand implements CommandExecutor {
                 Plugin plugin = (Plugin) sender;
                 if (player.isOp()) {
                     // will unvanish after typing again
-                    if (cmd.getName().equalsIgnoreCase("vanish")) {
+                    if (cmd.getName().contains("vanish")) {
                         if (vanishedPlayers.contains(player)) {
-                            vanishedPlayers.remove(player);
                             for (Player target : Bukkit.getOnlinePlayers()) {
                                 target.showPlayer(plugin,player);
                             }
-                            player.sendMessage(ChatColor.BOLD + "Vanished!");
+                            player.sendMessage(ChatColor.BOLD + "You are no longer hidden.");
+                            vanishedPlayers.remove(player);
                         } else {
-                            vanishedPlayers.add(player);
                             for (Player target : Bukkit.getOnlinePlayers()) {
                                 target.hidePlayer(plugin, player);
                             }
-                            player.sendMessage(ChatColor.BOLD + "Unvanished!");
-                        }
+                            player.sendMessage(ChatColor.BOLD + "You are hidden from other players.");
+                            vanishedPlayers.add(player);                        }
                     }
+                } else {
+                    player.sendMessage(ChatColor.DARK_RED + "This Command is only for people who are operator.");
                 }
             }
     return false;
