@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 name: Vanish
 version: '${project.version}'
 main: plugin.vanish.Vanish
 api-version: 1.17
 authors: [ Nassef, Khachiche ]
 description: This plugin includes vanish
+=======
+name: Nassef
+version: '${project.version}'
+main: cmdexe.Nassef.plugin
+api-version: 1.18
+>>>>>>> d9bdd28b465a30a98fd8b94ed3b4d1384fb7172c
 commands:
   vanish:
