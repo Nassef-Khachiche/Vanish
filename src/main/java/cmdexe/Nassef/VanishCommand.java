@@ -36,7 +36,7 @@ public class VanishCommand implements CommandExecutor {
                         }
                     }
                 } else {
-                    player.sendMessage(ChatColor.DARK_RED + "This Command is only for people who are operator.");
+                    player.sendMessage(ChatColor.DARK_AQUA + "This Command is only for people who are operator.");
                 }
             }
     return false;
