@@ -1,0 +1,8 @@
+name: Vanish
+version: '${project.version}'
+main: plugin.vanish.Vanish
+api-version: 1.17
+authors: [ Nassef, Khachiche ]
+description: This plugin includes vanish
+commands:
+  vanish:
