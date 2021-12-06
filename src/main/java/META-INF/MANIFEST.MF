@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
+Main-Class: jdk.jpackage.main.Main
+=======
 Main-Class: jdk.jfr.internal.tool.Main
+>>>>>>> d9bdd28b465a30a98fd8b94ed3b4d1384fb7172c
 

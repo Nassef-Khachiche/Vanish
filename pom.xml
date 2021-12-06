@@ -4,6 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< HEAD
+    <groupId>plugin</groupId>
+    <artifactId>vanish</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Vanish</name>
+
+    <description>This plugin includes vanish</description>
+=======
     <groupId>cmdexe</groupId>
     <artifactId>nassef</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -11,6 +21,7 @@
 
     <name>Nassef</name>
 
+>>>>>>> d9bdd28b465a30a98fd8b94ed3b4d1384fb7172c
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,7 +78,11 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
+<<<<<<< HEAD
+            <version>1.17.1-R0.1-SNAPSHOT</version>
+=======
             <version>1.18-R0.1-SNAPSHOT</version>
+>>>>>>> d9bdd28b465a30a98fd8b94ed3b4d1384fb7172c
             <scope>provided</scope>
         </dependency>
     </dependencies>
