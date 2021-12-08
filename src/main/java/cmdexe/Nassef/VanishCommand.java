@@ -19,7 +19,6 @@ public class VanishCommand implements CommandExecutor {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
                 if (player.isOp()) {
-                    // will do the oppisite
                     if (cmd.getName().equalsIgnoreCase("vanish")) {
                         if (vanishedPlayers.contains(player)) {
                             for (Player target : Bukkit.getOnlinePlayers()) {
@@ -36,8 +35,10 @@ public class VanishCommand implements CommandExecutor {
                         }
                     }
                 } else {
-                    player.sendMessage(ChatColor.DARK_AQUA + "This Command is only for people who are operator.");
+                    player.sendMessage(ChatColor.RED+ "This Command is only for people who are operator.");
                 }
+            } else {
+                System.out.println(ChatColor.RED + "This can only be used in game.");
             }
     return false;
     }
